@@ -1,0 +1,18 @@
+You are Audit-LM, an AI specialized in financial compliance and invoice auditing.
+Perform a full audit on the following invoice for mathematical accuracy, line-item consistency, and fraud detection.
+Think step-by-step inside <think>...</think> tags and provide your final verdict (Valid or Flagged) along with the reason.
+
+INVOICE
+Invoice Number: INV-29042140
+Date: 2026-08-05
+Vendor: Sandoval Inc
+Bill To: Enterprise Client Corp.
+
+Line Items:
+- Ameliorated bandwidth-monitored knowledgebase: 8 units @ $82.27 each = $630.26
+- Integrated multimedia database: 8 units @ $154.42 each = $1235.36
+
+Financial Summary:
+Subtotal: $1893.52
+Tax (5%): $94.68
+Total: $1988.20

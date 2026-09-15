@@ -1,0 +1,11 @@
+# AuditLM — inference dependencies
+#
+# Option A: Ollama (recommended for Windows / sharing)
+#   Install Ollama from https://ollama.com — no Python packages required for live_demo_vllm.py
+#
+# Option B: vLLM server + live_demo_vllm.py client
+vllm>=0.20
+
+# Option C: Unsloth 4-bit local inference (live_demo.py)
+# unsloth @ git+https://github.com/unslothai/unsloth.git
+# torch

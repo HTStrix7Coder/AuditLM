@@ -1,0 +1,23 @@
+# AuditLM — Ollama Modelfile
+# Run from repo root:  ollama create auditlm -f inference/Modelfile
+#
+# Requires: models/auditlm_3b_gguf/auditlm-3b-q4_k_m.gguf (~1.8 GB)
+# Download instructions: models/README.md
+
+FROM ./models/auditlm_3b_gguf/auditlm-3b-q4_k_m.gguf
+
+# Qwen2.5 ChatML (base architecture for AuditLM)
+TEMPLATE """{{ if .System }}<|im_start|>system
+{{ .System }}
+{{ end }}{{ if .Prompt }}<|im_start|>user
+{{ .Prompt }}
+{{ end }}<|im_start|>assistant
+"""
+
+SYSTEM """You are Audit-LM, an AI specialized in financial compliance, invoice verification, and quantitative audit reasoning.
+Think step-by-step inside <think>...</think> tags and provide your final verdict (Valid or Flagged) or calculated answer."""
+
+PARAMETER num_ctx 4096
+PARAMETER temperature 0.1
+PARAMETER stop "<|im_end|>"
+PARAMETER stop "<|endoftext|>"

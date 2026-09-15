@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Training checkpoints (large)
+checkpoints/
+
+# Model weights (use Git LFS or download separately — see models/README.md)
+models/**/*.gguf
+models/**/*.safetensors
+models/**/adapter_model.*
+models/**/model-*.safetensors
+models/**/pytorch_model*.bin
+
+# Large upstream datasets (clone separately)
+datasets/DocFinQA/
+datasets/FinQA/
+datasets/FinanceReasoning/
+
+# Nested git repos inside datasets
+datasets/**/.git/
+
+# Unsloth cache
+unsloth_compiled_cache/

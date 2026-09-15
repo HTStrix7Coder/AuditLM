@@ -1,0 +1,9 @@
+# AuditLM — training & evaluation (GPU required)
+unsloth @ git+https://github.com/unslothai/unsloth.git
+trl
+transformers
+datasets
+accelerate
+peft
+bitsandbytes
+vllm>=0.20
